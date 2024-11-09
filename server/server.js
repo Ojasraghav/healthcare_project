@@ -87,7 +87,7 @@
 // });
 const express = require("express");
 const connectDb = require("./config/dbConnection");
-const errorHandler = require("./middleware/errorHandler");
+const errorHandler = require("./middlewares/errorhandler");
 const cors = require("cors");
 const hbs = require("hbs");
 const path = require("path");
@@ -177,6 +177,6 @@ app.get("/images", (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-  console.log("Server running on port http://localhost:${port}");
+  console.log(`Server running on port http://localhost:${port}`);
 });
 
